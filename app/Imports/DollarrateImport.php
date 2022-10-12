@@ -7,6 +7,7 @@ use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 //use Hash;
 
+
 class DollarrateImport implements ToModel, WithHeadingRow
 {
     /**
