@@ -34,12 +34,4 @@ class MustardController extends Controller
        $get_dollar_rate=Dollars::filter_rate($request);
      return response()->json(  $get_dollar_rate);
     }
-
-
-
-
-
-
-
-
 }
