@@ -21,7 +21,7 @@ class Dollars extends Model
              {
                 $get_chart_month =Dollars::select(DB::raw("COUNT(*) as count"),
                  DB::raw("MONTHNAME(dollarrate_date) as month_name"))
-                ->whereMonth('dollarrate_date', date('m'))
+                ->whereYear('dollarrate_date', date('Y'))
                 ->groupBy(DB::raw("(month_name)"))
                 ->pluck('count', 'month_name');
            return  $get_chart_month ;    
