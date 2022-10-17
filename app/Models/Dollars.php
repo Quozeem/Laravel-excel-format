@@ -19,7 +19,7 @@ class Dollars extends Model
              ];
              public static function chart_month()
              {
-                $get_chart_month =Dollars::select(DB::raw("COUNT(*) as count"),
+                $get_chart_month =Dollars::select(DB::raw("Avg(dollarrate_rate) as count"),
                  DB::raw("MONTHNAME(dollarrate_date) as month_name"))
                 ->whereMonth('dollarrate_date', '<',date('m'))
                 ->groupBy(DB::raw("(month_name)"))
